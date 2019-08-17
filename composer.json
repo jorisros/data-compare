@@ -1,0 +1,30 @@
+{
+  "name": "youwe/data-compare",
+  "description": "Component that is able to compare big data sets",
+  "minimum-stability": "stable",
+  "license": "GPL-v3",
+  "authors": [
+    {
+      "name": "Joris Ros",
+      "email": "j.ros@youwe.nl"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "8.3.4",
+    "squizlabs/php_codesniffer": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "DataCompare\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "cs": "vendor/bin/phpcs --standard=PSR12 src",
+    "test": "vendor/bin/phpunit"
+  }
+}
