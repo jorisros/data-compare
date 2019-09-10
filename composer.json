@@ -2,7 +2,7 @@
   "name": "jorisros/data-compare",
   "description": "Component that is able to compare big data sets",
   "minimum-stability": "stable",
-  "license": "GPL-v3",
+  "license": "GPL-3.0-only",
   "authors": [
     {
       "name": "Joris Ros",
