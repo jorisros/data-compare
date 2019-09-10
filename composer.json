@@ -1,12 +1,12 @@
 {
-  "name": "youwe/data-compare",
+  "name": "jorisros/data-compare",
   "description": "Component that is able to compare big data sets",
   "minimum-stability": "stable",
   "license": "GPL-v3",
   "authors": [
     {
       "name": "Joris Ros",
-      "email": "j.ros@youwe.nl"
+      "email": "joris.ros@gmail.com"
     }
   ],
   "require": {
