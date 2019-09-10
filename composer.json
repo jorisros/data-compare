@@ -1,5 +1,6 @@
 {
   "name": "jorisros/data-compare",
+  "type": "library",
   "description": "Component that is able to compare big data sets",
   "minimum-stability": "stable",
   "license": "GPL-3.0-only",
