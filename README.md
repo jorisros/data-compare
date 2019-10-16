@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jorisros/data-compare.svg?branch=master)](https://travis-ci.org/jorisros/data-compare)
+
 DataCompare component
 =====================
 This is a component that enables you detect if there are changes between two arrays.
