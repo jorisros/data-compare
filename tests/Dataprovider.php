@@ -29,4 +29,13 @@ class Dataprovider
             'fieldD' => 'Value D',
         ];
     }
+
+    public static function getArrayInArray(): array
+    {
+        return [
+            'array' => [
+                'array'
+            ]
+        ];
+    }
 }

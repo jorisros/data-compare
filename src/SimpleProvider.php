@@ -29,15 +29,19 @@ class SimpleProvider implements ProviderInterface
 
     public function getComparisionValue(): string
     {
-        return $this->convertArrayToString();
+        return $this->convertArrayToString($this->storage);
     }
 
-    private function convertArrayToString(): string
+    private function convertArrayToString(array $storage): string
     {
         $string = '';
 
-        foreach ($this->storage as $key => $value) {
-            $string .= $key . $value;
+        foreach ($storage as $key => $value) {
+            if (is_array($value)) {
+                $string .= $this->convertArrayToString($value);
+            } else {
+                $string .= $key . $value;
+            }
         }
 
         return $this->convertSpecialCharacters($string);
