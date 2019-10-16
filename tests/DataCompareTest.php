@@ -57,4 +57,18 @@ class DataCompareTest extends \PHPUnit\Framework\TestCase
         $dataCompare = new \DataCompare\DataCompare($dataProvider, $dataProvider2);
         $this->assertFalse($dataCompare->isTheSame());
     }
+
+    public function testIgnoreKeys()
+    {
+        $dataProviderA = new SimpleProvider();
+        $dataProviderA->addArray(Dataprovider::getArrayWithDefaultItems());
+        $dataProviderA->ignoreKey('fieldB');
+
+        $dataProviderC = new SimpleProvider();
+        $dataProviderC->addArray(Dataprovider::getArrayWithDiffentValue());
+        $dataProviderC->ignoreKey('fieldB');
+
+        $dataCompare = new \DataCompare\DataCompare($dataProviderA, $dataProviderC);
+        $this->assertTrue($dataCompare->isTheSame());
+    }
 }

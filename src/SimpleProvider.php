@@ -14,6 +14,8 @@ class SimpleProvider implements ProviderInterface
 {
     private $storage = [];
 
+    private $ignoreList = [];
+
     /**
      * @param array $array
      */
@@ -27,6 +29,11 @@ class SimpleProvider implements ProviderInterface
         $this->storage[$key] = $value;
     }
 
+    public function ignoreKey(string $key): void
+    {
+        $this->ignoreList[] = $key;
+    }
+
     public function getComparisionValue(): string
     {
         return $this->convertArrayToString($this->storage);
@@ -37,6 +44,10 @@ class SimpleProvider implements ProviderInterface
         $string = '';
 
         foreach ($storage as $key => $value) {
+            if (in_array($key, $this->ignoreList)) {
+                continue;
+            }
+
             if (is_array($value)) {
                 $string .= $this->convertArrayToString($value);
             } else {

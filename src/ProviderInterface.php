@@ -14,5 +14,6 @@ interface ProviderInterface
 {
     public function addArray(array $array): void;
     public function addString(string $key, string $value): void;
+    public function ignoreKey(string $key): void;
     public function getComparisionValue(): string;
 }
