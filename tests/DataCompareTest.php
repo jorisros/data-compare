@@ -39,4 +39,21 @@ class DataCompareTest extends \PHPUnit\Framework\TestCase
         $dataCompare = new \DataCompare\DataCompare($dataProvider, $dataProvider);
         $this->assertTrue($dataCompare->isTheSame());
     }
+
+    public function testWithDifferentArray()
+    {
+        $dataProvider = new SimpleProvider();
+        $dataProvider->addArray(Dataprovider::getArrayInArray());
+
+        $dataProvider2 = new SimpleProvider();
+        $dataProvider2->addArray([
+            'array' => [
+                'array',
+                'array_2'
+            ]
+        ]);
+
+        $dataCompare = new \DataCompare\DataCompare($dataProvider, $dataProvider2);
+        $this->assertFalse($dataCompare->isTheSame());
+    }
 }
