@@ -22,9 +22,9 @@ $dataproviderA->addString('title', $product->getTitle());
 $dataproviderA->addString('price', $product->getPrice());
 
 $dataproviderB = new \DataCompare\SimpleProvider(); 
-$dataproviderA->addString('sku', $jsonImport->sku);
-$dataproviderA->addString('title', $jsonImport->title);
-$dataproviderA->addString('price', $jsonImport->price);
+$dataproviderB->addString('sku', $jsonImport->sku);
+$dataproviderB->addString('title', $jsonImport->title);
+$dataproviderB->addString('price', $jsonImport->price);
 
 $compareComponent = new \DataCompare\DataCompare($dataproviderA, $dataproviderB);
 
