@@ -1,11 +1,13 @@
 <?php
+
 /**
- * Class name
+ * DataProvider
  *
- * @package  PatInterfaceBundle
- * @author   Joris Ros <j.ros@youwe.nl>
+ * @package  DataCompare
+ * @author   Joris Ros <joris.ros@gmail.com>
  * @license  GPL <GNU General Public License, version 3>
  */
+
 namespace Tests;
 
 class Dataprovider

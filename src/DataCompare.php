@@ -1,14 +1,14 @@
 <?php
+
 /**
- * Class name
+ * DataCompare
  *
  * @package  DataCompare Component
- * @author   Joris Ros <j.ros@youwe.nl>
+ * @author   Joris Ros <joris.ros@gmail.com>
  * @license  GPL <GNU General Public License, version 3>
  */
 
 namespace DataCompare;
-
 
 final class DataCompare
 {
