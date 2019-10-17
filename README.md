@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jorisros/data-compare.svg?branch=master)](https://travis-ci.org/jorisros/data-compare)
+[![Maintainability](https://api.codeclimate.com/v1/badges/59d7406337e3a63d6ec6/maintainability)](https://codeclimate.com/github/jorisros/data-compare/maintainability)
 
 DataCompare component
 =====================
