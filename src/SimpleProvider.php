@@ -47,15 +47,24 @@ class SimpleProvider implements ProviderInterface
             if (in_array($key, $this->ignoreList)) {
                 continue;
             }
-
-            if (is_array($value)) {
-                $string .= $this->convertArrayToString($value);
-            } else {
-                $string .= $key . $value;
-            }
+            
+            $string .= $this->handleConversion($key, $value);
         }
 
         return $this->convertSpecialCharacters($string);
+    }
+
+    private function handleConversion(string $key, $value): string
+    {
+        $string = '';
+
+        if (is_array($value)) {
+            $string .= $this->convertArrayToString($value);
+        } else {
+            $string .= $key . $value;
+        }
+
+        return $string;
     }
 
     private function convertSpecialCharacters(string $string)
